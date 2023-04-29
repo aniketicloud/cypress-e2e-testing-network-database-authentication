@@ -1,5 +1,9 @@
 /// <reference types="Cypress" />
 
+beforeEach(() => {
+  cy.task("seedDatabase");
+});
+
 describe("Takeaways", () => {
   it("should display a list of fetched takeaways", () => {
     cy.visit("/");

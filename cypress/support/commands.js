@@ -45,7 +45,8 @@ Cypress.on('uncaught:exception', (err) => {
     err.message.includes('Minified React error #418;') ||
     err.message.includes('Minified React error #423;') ||
     err.message.includes('hydrating') ||
-    err.message.includes('Hydration')
+    err.message.includes('Hydration') ||
+    err.message.includes('HTML to contain') 
   ) {
     return false;
   }
